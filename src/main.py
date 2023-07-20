@@ -5,7 +5,7 @@ from fpdf import FPDF, XPos, YPos
 from datetime import date
 
 class PDF(FPDF):
-    full_name = 'Spellmeyer, Benedikt'
+    full_name = 'Adamczyk, Sebastian'
 
     def generate(self, args):
         self.add_page()
@@ -88,7 +88,7 @@ def generate():
     parser.add_argument('planned_vacation_days')
 
     pdf = PDF('P', 'mm', 'A4')
-    pdf.set_author('Benedikt Spellmeyer')
+    pdf.set_author('Sebastian Adamczyk')
     pdf.set_title('Urlaubsantrag')
     pdf.set_margins(20, 20, 20)
     pdf.set_line_width(0.1)
