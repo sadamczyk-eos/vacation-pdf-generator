@@ -93,8 +93,9 @@ def generate():
     pdf.set_title('Urlaubsantrag')
     pdf.set_margins(20, 20, 20)
     pdf.set_line_width(0.1)
-    pdf.generate(parser.parse_args())
-    pdf.output('out/vacation.pdf')
+    args = parser.parse_args()
+    pdf.generate(args)
+    pdf.output('out/urlaub_sebastian-adamczyk_' + args.date_from + '-' + args.date_to + '.pdf')
 
 if __name__ == "__main__":
     generate()
