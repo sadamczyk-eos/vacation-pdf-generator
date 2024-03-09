@@ -51,8 +51,9 @@ class PDF(FPDF):
 
         self.set_y(self.get_y() + 30)
         self.cell(txt='Osnabrück, ' + date.today().strftime('%d.%m.%Y'), border='B', w=60)
+        self.set_y(self.get_y() - 10)
         self.set_x(105)
-        self.cell(txt=' ', border='B', w=60, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
+        self.cell(link=self.image('./signature.png', w=37), border='B', w=60, new_x=XPos.LMARGIN, new_y=YPos.NEXT)
         self.set_y(self.get_y() + 1)
         self.cell(txt='Ort, Datum')
         self.set_x(105)
